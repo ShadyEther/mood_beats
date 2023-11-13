@@ -79,6 +79,8 @@ def main():
         # To read image file buffer with OpenCV:
             out=VideoTransformer.transform("",feed)
             emotion=out['emotion']
+            if emotion is None:
+                st.write("No faces detected")
             
                 
 
@@ -93,8 +95,8 @@ def main():
             <iframe src="{spotify_playlist_url}" width="95%" height="500px" frameborder="0" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media;"></iframe>
         </div>
         """, unsafe_allow_html=True)
-    else:
-        st.write("No Face Detected")
+    
+        
     
 
 
